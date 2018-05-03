@@ -28,7 +28,7 @@
             <li class="active">
                 <a href="/"><i class="fa fa-th-large"></i> <span class="nav-label" data-i18n="nav.dashboard">Dashboards</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse in">
-                    <li class="active"><a href="/">Dashboard v.1</a></li>
+                    <li class="active"><a href="/category/list">CategroyManage</a></li>
                     <li class=""><a href="/Dashboards/Dashboard_2">Dashboard v.2</a></li>
                     <li class=""><a href="/Dashboards/Dashboard_3">Dashboard v.3</a></li>
                     <li class=""><a href="/Dashboards/Dashboard_4_1">Dashboard v.4</a></li>
