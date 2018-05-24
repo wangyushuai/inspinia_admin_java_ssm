@@ -19,6 +19,7 @@
 
     <link href="${pageContext.request.contextPath}/vendor/css/animate.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/vendor/css/style.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/vendor/js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -82,26 +83,16 @@
                     <%@include file="edit.jsp"%>
                 </div>
             </renderBody>
+
             <%@include file="../shared/_footer.jsp"%>
         </div>
     </div>
 
 
-    <!-- Mainly scripts -->
-    <script src="${pageContext.request.contextPath}/vendor/js/jquery-3.1.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/vendor/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/vendor/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="${pageContext.request.contextPath}/vendor/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <script src="${pageContext.request.contextPath}/vendor/js/plugins/dataTables/datatables.min.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="${pageContext.request.contextPath}/vendor/js/inspinia.js"></script>
-    <script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
+>
 
     <!-- Page-Level Scripts -->
     <renderScript>
-
         <script src="${pageContext.request.contextPath}/src/category.js"></script>
     </renderScript>
 </body>
