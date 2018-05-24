@@ -38,6 +38,9 @@
     <script src="${pageContext.request.contextPath}/vendor/js/inspinia.js"></script>
     <script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
 
+    <%--vue js--%>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <renderScript></renderScript>
 </body>
 </html>
