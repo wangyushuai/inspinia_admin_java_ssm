@@ -14,17 +14,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>INSPINIA | @ViewBag.Title</title>
 
-    <link href="vendor/css/bootstrap.css" rel="stylesheet">
-    <link href="vendor/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="vendor/css/animate.css" rel="stylesheet">
-    <link href="vendor/css/style.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/vendor/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/vendor/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/vendor/css/animate.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/vendor/css/style.css" rel="stylesheet">
+    <%--vue js--%>
+    <%--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>--%>
+
 </head>
 <body>
     <div id="wrapper">
         <%@include file="_navigation.jsp"%>
         <div id="page-wrapper" class="gray-bg">
             <%@include file="_topNavBar.jsp"%>
-            <renderBody></renderBody>
+            <render-body></render-body>
             <%@include file="_footer.jsp"%>
         </div>
     </div>
@@ -38,9 +41,13 @@
     <script src="${pageContext.request.contextPath}/vendor/js/inspinia.js"></script>
     <script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
 
-    <%--vue js--%>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <render-script>
+    </render-script>
 
-    <renderScript></renderScript>
+    <script>
+        new Vue({
+            el:"#wrapper",
+        })
+    </script>
 </body>
 </html>
