@@ -29,7 +29,7 @@
                 <a href="/"><i class="fa fa-th-large"></i> <span class="nav-label" data-i18n="nav.dashboard">Dashboards</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse in">
                     <li class="active"><a href="/admin/category/list">CategroyManage</a></li>
-                    <li class=""><a href="/admin/property/list">PropertyManage</a></li>
+                    <li class=""><a href="/admin/property/list?cid=1">PropertyManage</a></li>
                     <li class=""><a href="/Dashboards/Dashboard_3">Dashboard v.3</a></li>
                     <li class=""><a href="/Dashboards/Dashboard_4_1">Dashboard v.4</a></li>
                     <li class=""><a href="/Dashboards/Dashboard_5">Dashboard v.5</a></li>
