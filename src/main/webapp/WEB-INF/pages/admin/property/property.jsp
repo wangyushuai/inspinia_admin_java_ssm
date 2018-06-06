@@ -7,11 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-    <title>属性管理</title>
-</head>
-<body>
+
+<template id="render-body">
     <table class="table table-hover">
         <thead>
         <tr>
@@ -22,28 +19,32 @@
         </tr>
         </thead>
         <tbody>
-        <%--<c:forEach items="${properties}" var="item" varStatus="vs">--%>
-            <%--<tr>--%>
-                <%--<td>--%>
-                    <%--<a href="javascript:;" onclick="del('${item.id}')"><i class="fa fa-trash" aria-hidden="true"></i></a>--%>
-                    <%--<a href="javascript:;" onclick="edit('${item.id}')"><i class="fa fa-pencil-square-o"></i></a>--%>
-                <%--</td>--%>
-                <%--<td>${item.id}</td>--%>
-                <%--<td>${item.cid}</td>--%>
-                <%--<td class="text-navy"><i class="fa fa-level-up"></i> ${item.name}</td>--%>
-            <%--</tr>--%>
-        <%--</c:forEach>--%>
+        <c:forEach items="${properties}" var="item" varStatus="vs">
+            <tr>
+                <td>
+                    <a href="javascript:;" onclick="del('${item.id}')"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    <a href="javascript:;" onclick="edit('${item.id}')"><i class="fa fa-pencil-square-o"></i></a>
+                </td>
+                <td>${item.id}</td>
+                <td>${item.cid}</td>
+                <td class="text-navy"><i class="fa fa-level-up"></i> ${item.name}</td>
+            </tr>
+        </c:forEach>
         </tbody>
     </table>
+</template>
 
 
-    <script>
-        var app = new Vue({
-            el:'#app',
-            data: {
-                message:"hello,vue"
-            }
-        })
-    </script>
-</body>
-</html>
+<%--vue js--%>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('render-body',{
+        template:'#render-body'
+    });
+</script>
+<%--master page--%>
+<%@include file="../shared/_layout.jsp"%>
+
+
+
+
