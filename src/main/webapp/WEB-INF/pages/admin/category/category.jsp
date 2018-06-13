@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>分类页</title>
+    <title>分类管理页</title>
     <link href="${pageContext.request.contextPath}/vendor/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/vendor/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 
@@ -66,7 +66,7 @@
                                             <a href="javascript:;" onclick="del('${item.id}')"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                             <a href="javascript:;" onclick="edit('${item.id}')"><i class="fa fa-pencil-square-o"></i></a>
                                         </td>
-                                        <td><span class="pie"><img src="/inspinia/_upload/img/category/${item.id}.jpg" class="img-rounded img-md"></span></td>
+                                        <td><span class="pie"><img src="/admin/_upload/img/category/${item.id}.jpg" class="img-rounded img-md"></span></td>
                                         <td>${item.id}</td>
                                         <td class="text-navy"> <i class="fa fa-level-up"></i> ${item.name}</td>
                                     </tr>
@@ -83,13 +83,19 @@
                     <%@include file="edit.jsp"%>
                 </div>
             </renderBody>
-
             <%@include file="../shared/_footer.jsp"%>
         </div>
     </div>
 
 
->
+    <!-- Mainly scripts -->
+    <script src="${pageContext.request.contextPath}/vendor/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="${pageContext.request.contextPath}/vendor/js/inspinia.js"></script>
+    <script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
 
     <!-- Page-Level Scripts -->
     <renderScript>

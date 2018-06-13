@@ -2,7 +2,7 @@
 function del(id) {
         console.log(id);
         $.ajax({
-            url:"/inspinia/category/delete",
+            url:"/admin/category/delete",
             data:{"id":id},
             type:"post",
             dataType:"json",
@@ -20,13 +20,13 @@ function del(id) {
 
 function edit(id) {
     $.ajax({
-       url:"/inspinia/category/get",
+       url:"/admin/category/get",
         data:{"id":id},
         type:"get",
         dataType:"json",
         success:function (result) {
             if(result.code == 100) {
-                var imgSrc = "/inspinia/_upload/img/category/" + result.data.id +".jpg";
+                var imgSrc = "/admin/_upload/img/category/" + result.data.id +".jpg";
                 $("#edit_image").attr("src",imgSrc);
                 $("#edit_id").val(result.data.id);
                 $("#edit_name").val(result.data.name);
