@@ -16,7 +16,9 @@ $(document).ready(function () {
     }
 
     // MetisMenu
+    metisMenuExtend();//show curent seleted row // this row was added by wys
     $('#side-menu').metisMenu();
+
 
     // Collapse ibox function
     $('.collapse-link').on('click', function () {
@@ -295,4 +297,19 @@ function WinMove() {
         .disableSelection();
 }
 
+// add by wangyushuai@fang.com
+function metisMenuExtend() {
+    var pathName = window.location.pathname;
+    $('#side-menu li ul li a').each(function () {
+        var curHref = $(this).attr('href');
+        if(curHref == pathName) {
+            var parentLi =  $(this).parent();
+            var parentUl = parentLi.parent();
+            var ancestorsLi = parentUl.parent();
+            parentLi.addClass('active');
+            parentUl.addClass('in');
+            ancestorsLi.addClass('active');
+        }
+    });
+}
 
