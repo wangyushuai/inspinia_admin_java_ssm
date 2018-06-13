@@ -4,6 +4,9 @@ inspinia_admin_Java(后台管理系统框架)
 - 后端为java基于SSM（Spring+SpringMVC+MyBatis）框架的maven项目
 - 数据库使用MySql
 
+##项目预览截图
+![项目截图](https://github.com/wangyushuai/inspinia_admin_java_ssm/raw/master/ReadMePictures/projectView.png)
+
 ## 技术亮点：
 1. 使用了Mybatis逆向工程，自动生成mapper.xml 和 bean
 2. 使用了Vue 框架，做了母版页
