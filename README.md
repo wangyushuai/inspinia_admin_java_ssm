@@ -5,7 +5,7 @@ inspinia_admin_Java(后台管理系统框架)
 - 数据库使用MySql
 
 ## 项目预览截图
-![项目截图](https://github.com/wangyushuai/inspinia_admin_java_ssm/raw/master/ReadMePictures/projectView.png)
+![项目截图](https://github.com/wangyushuai/inspinia_admin_java_ssm/raw/master/src/main/webapp/vendor/img/projectView.png)
 
 ## 技术亮点：
 1. 使用了Mybatis逆向工程，自动生成mapper.xml 和 bean
