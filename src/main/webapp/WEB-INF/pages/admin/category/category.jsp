@@ -68,7 +68,7 @@
                                         </td>
                                         <td><span class="pie"><img src="/admin/_upload/img/category/${item.id}.jpg" class="img-rounded img-md"></span></td>
                                         <td>${item.id}</td>
-                                        <td class="text-navy"> <i class="fa fa-level-up"></i> ${item.name}</td>
+                                        <td class="text-navy"><a href="/admin/product/list?cid=${item.id}"><i class="fa fa-level-up"></i> ${item.name}</a></td>
                                     </tr>
                                 </c:forEach>
                             </tbody>

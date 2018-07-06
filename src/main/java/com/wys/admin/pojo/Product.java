@@ -3,6 +3,8 @@ package com.wys.admin.pojo;
 import java.util.Date;
 
 public class Product {
+    private Category category;
+
     private Integer id;
 
     private String name;
@@ -18,6 +20,14 @@ public class Product {
     private Integer cid;
 
     private Date createDate;
+
+    public Category getCategory() {
+        return  category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public Integer getId() {
         return id;
