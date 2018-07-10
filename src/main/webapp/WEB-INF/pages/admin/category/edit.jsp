@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<form method="post" action="/inspinia/category/update" enctype="multipart/form-data">
+<form method="post" action="/admin/category/update" enctype="multipart/form-data">
     <div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true">
         <input type="hidden" id="edit_id" name="id"/>

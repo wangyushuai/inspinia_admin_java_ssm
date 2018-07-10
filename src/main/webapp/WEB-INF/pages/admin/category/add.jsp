@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <button data-target="#addModel" data-toggle="modal" class="btn btn-primary">增加</button>
-<form method="post" action="/inspinia/category/add" enctype="multipart/form-data">
+<form method="post" action="/admin/category/add" enctype="multipart/form-data">
     <div class="modal fade" id="addModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
