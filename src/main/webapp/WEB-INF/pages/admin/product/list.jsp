@@ -10,7 +10,6 @@
 
 <%--master page--%>
 <%@include file="../shared/base-layout.jsp"%>
-
 <div id="_wrapper">
     <base-layout>
         <div class="ibox float-e-margins">
@@ -48,7 +47,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${products}" var="item" varStatus="vs">
+                    <c:forEach items="${ps}" var="item" varStatus="vs">
                         <tr>
                             <td></td>
                             <td>/</td>
@@ -63,12 +62,25 @@
                 </table>
             </div>
         </div>
+        <%@include file="add.jsp"%>
     </base-layout>
 </div>
-
 <script>
-    new Vue({
-        el:"#_wrapper"
+    var app = new Vue({
+        el:"#_wrapper",
+        data: {
+            addCategorySelected: ${c.id},
+            addCategoryOptions: []
+        },
+        methods: {
+            getAllCategory:function (event) {
+                $.get("/admin/category/ajaxList",function(data,status,xhr) {
+                    if(status == "success" && data.code == 100){
+                        app.addCategoryOptions = data.data;
+                    }
+                },"json");
+            }
+        }
     })
 </script>
 

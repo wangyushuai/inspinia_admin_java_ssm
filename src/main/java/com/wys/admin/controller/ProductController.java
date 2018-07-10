@@ -11,7 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.lang.reflect.Method;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -41,6 +44,13 @@ public class ProductController {
         model.addAttribute("c",c);
         model.addAttribute("page",page);
         return "admin/product/list";
+    }
+
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public String add(Model model,Product product) {
+        product.setCreateDate(new Date());
+        boolean isSuccess =  productService.add(product);
+        return "redirect: list?cid=" + product.getCid();
     }
 
 }

@@ -3,6 +3,7 @@ package com.wys.admin.service;
 import com.wys.admin.mapper.ProductMapper;
 import com.wys.admin.pojo.Category;
 import com.wys.admin.pojo.Product;
+import com.wys.admin.pojo.ProductExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +21,8 @@ public class ProductServiceImpl implements ProductService {
     CategoryService categoryService;
 
     @Override
-    public void add(Product product) {
-        productMapper.insert(product);
+    public boolean add(Product product) {
+        return productMapper.insert(product);
     }
 
     @Override
@@ -55,6 +56,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List list(int cid) {
-        return null;
+        ProductExample productExample = new ProductExample();
+        productExample.createCriteria().andCidEqualTo(cid);
+        productExample.setOrderByClause("id desc");
+        List result = productMapper.selectByExample(productExample);
+        return result;
     }
 }

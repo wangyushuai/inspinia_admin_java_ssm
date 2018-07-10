@@ -7,7 +7,7 @@ import java.util.List;
 public interface ProductMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Product record);
+    boolean insert(Product record);
 
     int insertSelective(Product record);
 

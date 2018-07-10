@@ -45,6 +45,21 @@ public class CategoryController {
         return "/admin/category/category";
     }
 
+    @ResponseBody
+    @RequestMapping("/ajaxList")
+    public String GetAll() {
+      List<Category> list =  service.list();
+      JsonResult<List<Category>> jsonResult = new JsonResult<>();
+      if (list != null && list.size() > 0) {
+          jsonResult.setMessage("成功");
+          jsonResult.setCode(100);
+          jsonResult.setData(list);
+      }
+      return new JSONObject(jsonResult).toString();
+    }
+
+
+
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     public String Add(Category category, HttpSession session, UploadImageFile categoryImage) throws IOException {
         service.add(category);
@@ -55,7 +70,7 @@ public class CategoryController {
         categoryImage.getImage().transferTo(file);
         BufferedImage img = ImageUtil.change2jpg(file);
         ImageIO.write(img,"jpg",file);
-        return "redirect: /inspinia/category/list";
+        return "redirect: /admin/category/list";
     }
 
     @ResponseBody
@@ -103,7 +118,7 @@ public class CategoryController {
             }
         }
 
-        return "redirect: /inspinia/category/list";
+        return "redirect: /admin/category/list";
     }
 
 

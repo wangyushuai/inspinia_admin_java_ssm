@@ -8,7 +8,7 @@ import java.util.List;
  * Created by wangyushuai@fang.com on 2018/6/14.
  */
 public interface ProductService {
-    void add(Product product);
+    boolean add(Product product);
     void delete(int id);
     void update(Product product);
     Product get(int id);
