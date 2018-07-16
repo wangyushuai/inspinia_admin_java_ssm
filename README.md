@@ -1,6 +1,6 @@
 # inspinia_admin_java_ssm
 inspinia_admin_Java(后台管理系统框架)
-- 前端样式基于inspinia_admin-v2.7.1框架，使用了VUE做脚本开发;
+- 前端基于inspinia_admin-v2.7.1 及 VUE 框架;
 - 后端为java基于SSM（Spring+SpringMVC+MyBatis）框架的maven项目
 - 数据库使用MySql
 
