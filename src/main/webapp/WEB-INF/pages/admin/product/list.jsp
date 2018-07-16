@@ -49,7 +49,7 @@
                     <tbody>
                     <c:forEach items="${ps}" var="item" varStatus="vs">
                         <tr>
-                            <td></td>
+                            <td><a href="/admin/product/delete?id=${item.id}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                             <td>/</td>
                             <td>${item.name}</td>
                             <td>${item.subTitle}</td>

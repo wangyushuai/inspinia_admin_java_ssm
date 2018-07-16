@@ -26,8 +26,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void delete(int id) {
-        productMapper.deleteByPrimaryKey(id);
+    public boolean delete(int id) {
+        return productMapper.deleteByPrimaryKey(id);
     }
 
     @Override

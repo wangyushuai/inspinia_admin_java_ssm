@@ -32,7 +32,8 @@ public class ProductController {
     ProductService productService;
 
     @RequestMapping("/list")
-    public String List(int cid,Model model,Page page){
+    public String List(Integer cid,Model model,Page page){
+        page.setCount(5);
         Category c = categoryService.get(cid);
         PageHelper.offsetPage(page.getStart(),page.getCount());
         List<Product> ps = productService.list(cid);
@@ -51,6 +52,15 @@ public class ProductController {
         product.setCreateDate(new Date());
         boolean isSuccess =  productService.add(product);
         return "redirect: list?cid=" + product.getCid();
+    }
+
+    @RequestMapping(value = "/delete")
+    public String  delete(int id) {
+        Product product = productService.get(id);
+        if(product != null) {
+           productService.delete(id);
+        }
+        return "redirect:list?cid=" + product.getCid();
     }
 
 }

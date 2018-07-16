@@ -5,7 +5,7 @@ import com.wys.admin.pojo.ProductExample;
 import java.util.List;
 
 public interface ProductMapper {
-    int deleteByPrimaryKey(Integer id);
+    boolean deleteByPrimaryKey(Integer id);
 
     boolean insert(Product record);
 
