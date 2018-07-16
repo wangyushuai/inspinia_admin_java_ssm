@@ -33,6 +33,7 @@ public class ProductController {
 
     @RequestMapping("/list")
     public String List(Integer cid,Model model,Page page){
+        if(cid == null) cid = 1;
         page.setCount(5);
         Category c = categoryService.get(cid);
         PageHelper.offsetPage(page.getStart(),page.getCount());
