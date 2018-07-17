@@ -11,7 +11,6 @@
     <result column="cid" jdbcType="INTEGER" property="cid" />
     <result column="createDate" jdbcType="TIMESTAMP" property="createDate" />
   </resultMap>
-
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

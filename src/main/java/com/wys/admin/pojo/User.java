@@ -7,6 +7,8 @@ public class User {
 
     private String password;
 
+    private String portrait;
+
     public Integer getId() {
         return id;
     }
@@ -29,5 +31,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    public String getPortrait() {
+        return portrait;
+    }
+
+    public void setPortrait(String portrait) {
+        this.portrait = portrait == null ? null : portrait.trim();
     }
 }

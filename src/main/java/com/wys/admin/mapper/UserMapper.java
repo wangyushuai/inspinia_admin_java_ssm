@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
-    int insert(User record);
+    boolean insert(User record);
 
     int insertSelective(User record);
 

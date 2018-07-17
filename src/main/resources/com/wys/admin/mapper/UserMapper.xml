@@ -5,6 +5,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="portrait" jdbcType="VARCHAR" property="portrait" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -36,7 +37,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, password
+    id, name, password, portrait
   </sql>
   <select id="selectByExample" parameterType="com.wys.admin.pojo.UserExample" resultMap="BaseResultMap">
     select
@@ -64,8 +65,10 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.wys.admin.pojo.User" useGeneratedKeys="true">
-    insert into user (name, password)
-    values (#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})
+    insert into user (name, password, portrait
+      )
+    values (#{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{portrait,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.wys.admin.pojo.User" useGeneratedKeys="true">
     insert into user
@@ -76,6 +79,9 @@
       <if test="password != null">
         password,
       </if>
+      <if test="portrait != null">
+        portrait,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="name != null">
@@ -83,6 +89,9 @@
       </if>
       <if test="password != null">
         #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="portrait != null">
+        #{portrait,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -95,13 +104,17 @@
       <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
+      <if test="portrait != null">
+        portrait = #{portrait,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.wys.admin.pojo.User">
     update user
     set name = #{name,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR}
+      password = #{password,jdbcType=VARCHAR},
+      portrait = #{portrait,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

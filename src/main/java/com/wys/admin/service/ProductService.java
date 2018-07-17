@@ -12,5 +12,5 @@ public interface ProductService {
     boolean delete(int id);
     void update(Product product);
     Product get(int id);
-    List list(int cid);
+    List list(Integer cid);
 }
