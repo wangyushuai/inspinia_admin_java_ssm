@@ -303,6 +303,76 @@ public class UserExample {
             addCriterion("password not between", value1, value2, "password");
             return (Criteria) this;
         }
+
+        public Criteria andPortraitIsNull() {
+            addCriterion("portrait is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitIsNotNull() {
+            addCriterion("portrait is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitEqualTo(String value) {
+            addCriterion("portrait =", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitNotEqualTo(String value) {
+            addCriterion("portrait <>", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitGreaterThan(String value) {
+            addCriterion("portrait >", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitGreaterThanOrEqualTo(String value) {
+            addCriterion("portrait >=", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitLessThan(String value) {
+            addCriterion("portrait <", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitLessThanOrEqualTo(String value) {
+            addCriterion("portrait <=", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitLike(String value) {
+            addCriterion("portrait like", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitNotLike(String value) {
+            addCriterion("portrait not like", value, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitIn(List<String> values) {
+            addCriterion("portrait in", values, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitNotIn(List<String> values) {
+            addCriterion("portrait not in", values, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitBetween(String value1, String value2) {
+            addCriterion("portrait between", value1, value2, "portrait");
+            return (Criteria) this;
+        }
+
+        public Criteria andPortraitNotBetween(String value1, String value2) {
+            addCriterion("portrait not between", value1, value2, "portrait");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {
