@@ -17,6 +17,7 @@
     <link href="${pageContext.request.contextPath}/vendor/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/vendor/css/animate.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/vendor/css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 <template id="base-layout">
@@ -24,8 +25,10 @@
         <%@include file="_navigation.jsp"%>
         <div id="page-wrapper" class="gray-bg">
             <%@include file="_topNavBar.jsp"%>
+            <%@include file="_pageHeading.jsp"%>
             <%--<render-body></render-body>--%>
-            <div id="content"><slot></slot></div>
+            <header><slot name="page-header"></slot></header>
+            <main id="content"><slot></slot></main>
             <%@include file="_footer.jsp"%>
         </div>
     </div>
@@ -43,10 +46,8 @@
 
 
 <%--vue js--%>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
     Vue.component("base-layout",{
         template:"#base-layout"
     })
-
 </script>
