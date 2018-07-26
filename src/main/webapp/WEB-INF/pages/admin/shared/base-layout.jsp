@@ -25,8 +25,6 @@
         <%@include file="_navigation.jsp"%>
         <div id="page-wrapper" class="gray-bg">
             <%@include file="_topNavBar.jsp"%>
-            <%@include file="_pageHeading.jsp"%>
-            <%--<render-body></render-body>--%>
             <header><slot name="page-header"></slot></header>
             <main id="content"><slot></slot></main>
             <%@include file="_footer.jsp"%>
@@ -41,13 +39,13 @@
 <!-- Custom and plugin javascript -->
 <script src="${pageContext.request.contextPath}/vendor/js/inspinia.js"></script>
 <script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
+<script>
+    Vue.component("base-layout",{
+        template:"#base-layout",
+
+    })
+</script>
 </body>
 </html>
 
 
-<%--vue js--%>
-<script>
-    Vue.component("base-layout",{
-        template:"#base-layout"
-    })
-</script>
