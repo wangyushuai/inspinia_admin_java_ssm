@@ -1,6 +1,7 @@
 package com.wys.admin.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Order {
     private Integer id;
@@ -28,6 +29,14 @@ public class Order {
     private Integer uid;
 
     private String status;
+
+    private List<OrderItem> orderItems;
+
+    private User user;
+
+    private float total;
+
+    private int totalNumber;
 
     public Integer getId() {
         return id;
@@ -129,7 +138,48 @@ public class Order {
         return status;
     }
 
+    public String getStatusDesc()
+    {
+        String desc = "未知";
+        switch (status) {
+
+        }
+        return desc;
+    }
+
     public void setStatus(String status) {
         this.status = status == null ? null : status.trim();
+    }
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
+
+    public int getTotalNumber() {
+        return totalNumber;
+    }
+
+    public void setTotalNumber(int totalNumber) {
+        this.totalNumber = totalNumber;
     }
 }
