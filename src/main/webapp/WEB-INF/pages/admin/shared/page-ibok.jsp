@@ -7,10 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<template>
+<template id="page-ibox">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>产品管理</h5>
+            <h5>{{title}}</h5>
             <div class="ibox-tools">
                 <a class="collapse-link">
                     <i class="fa fa-chevron-up"></i>
@@ -30,10 +30,18 @@
             </div>
         </div>
         <div class="ibox-content">
-
+            {{content}}
         </div>
     </div>
-
-
 </template>
+
+<script type="text/javascript">
+    Vue.component("page-ibox",{
+        template:"#page-ibox",
+        props:{
+            title:String,
+            content:String
+        }
+    });
+</script>
 

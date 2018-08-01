@@ -12,7 +12,8 @@
 
 <div id="_wrapper">
     <base-layout>
-
+        <div solt="page-header">page-header标题插槽内容</div>
+        <div>默认插槽内容</div>
     </base-layout>
 </div>
 
@@ -20,7 +21,9 @@
     var app = new Vue({
         el:"#_wrapper",
         data:{
-            pt:{},//page-header component  use
+            iboxData:{
+                "title":"ibox Title"
+            },//page-ibox component  use
 
         }
     })
