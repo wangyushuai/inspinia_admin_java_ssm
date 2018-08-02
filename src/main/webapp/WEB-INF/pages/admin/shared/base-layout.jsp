@@ -28,7 +28,9 @@
             <header><slot name="page-header"></slot></header>
             <main id="content">
                 <slot></slot><!--默认插槽-->
-                <page-ibox title="iboxData.title"></page-ibox> <!--base-layout 的子组件-->
+                <%--<page-ibox v-bind:title="layoutData.iboxData.title" v-bind:content="layoutData.iboxData.content"></page-ibox> <!--base-layout 的子组件-->--%>
+                <page-ibox v-bind="layoutData.iboxData"></page-ibox> <!--base-layout 的子组件-->
+                <h2>{{testStr}}</h2>
             </main>
             <%@include file="_footer.jsp"%>
         </div>
@@ -87,8 +89,11 @@
         components:{
             "page-ibox":pageIbox
         },
+        data:function() {
+          return {testStr:"我是base-layout data : TestStr"}
+        },
         props:{
-          iboxData:Object,//子组件ibox所需要的输入数据
+            layoutData:Object
         }
     })
 </script>

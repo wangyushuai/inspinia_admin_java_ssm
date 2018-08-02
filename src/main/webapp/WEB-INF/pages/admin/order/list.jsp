@@ -11,9 +11,9 @@
 <%@include file="../shared/page-header.jsp"%>
 
 <div id="_wrapper">
-    <base-layout>
-        <div solt="page-header">page-header标题插槽内容</div>
-        <div>默认插槽内容</div>
+    <base-layout v-bind:layout-data="layoutData">
+        <div solt="page-header">page-header solt content</div><br/>
+        <div>default solt content</div>
     </base-layout>
 </div>
 
@@ -21,10 +21,12 @@
     var app = new Vue({
         el:"#_wrapper",
         data:{
-            iboxData:{
-                "title":"ibox Title"
-            },//page-ibox component  use
-
+            layoutData:{
+               iboxData:{
+                    title:"ibox Title xx",
+                    content:"ibox content xx"
+                }
+            },
         }
     })
 </script>
