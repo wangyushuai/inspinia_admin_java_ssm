@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.wys.admin.pojo.Category;
 import com.wys.admin.service.CategoryService;
-import com.wys.util.ImageUtil;
+import com.wys.util.common.ImageUtil;
 import com.wys.util.bean.JsonResult;
 import com.wys.util.bean.Page;
 import com.wys.util.bean.UploadImageFile;

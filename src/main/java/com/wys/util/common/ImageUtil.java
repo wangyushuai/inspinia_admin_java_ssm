@@ -1,4 +1,4 @@
-package com.wys.util;
+package com.wys.util.common;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
