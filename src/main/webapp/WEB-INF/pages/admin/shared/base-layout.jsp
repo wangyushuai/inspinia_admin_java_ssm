@@ -30,15 +30,14 @@
                 <slot></slot><!--默认插槽-->
                 <%--<page-ibox v-bind:title="layoutData.iboxData.title" v-bind:content="layoutData.iboxData.content"></page-ibox> <!--base-layout 的子组件-->--%>
                 <page-ibox v-bind="layoutData.iboxData"></page-ibox> <!--base-layout 的子组件-->
-                <h2>{{testStr}}</h2>
             </main>
             <%@include file="_footer.jsp"%>
         </div>
     </div>
 </template>
 
-<template id="page-ibox">
-    <div class="ibox float-e-margins">
+<template id="page-ibox" >
+    <div class="ibox float-e-margins" v-if="iboxSeen">
         <div class="ibox-title">
             <h5>{{title}}</h5>
             <div class="ibox-tools">
@@ -59,8 +58,7 @@
                 </a>
             </div>
         </div>
-        <div class="ibox-content">
-            {{content}}
+        <div class="ibox-content" v-html="content">
         </div>
     </div>
 </template>
@@ -72,6 +70,11 @@
         props:{
             title:String,
             content:String
+        },
+        computed:{
+            iboxSeen :function () {
+               return  typeof (this.title) != "undefined" && typeof (this.content) != "undefined";
+            }
         }
     };
 </script>
@@ -84,18 +87,20 @@
 <script src="${pageContext.request.contextPath}/vendor/js/inspinia.js"></script>
 <script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
 <script>
-    Vue.component("base-layout",{
-        template:"#base-layout",
-        components:{
-            "page-ibox":pageIbox
+    Vue.component("base-layout", {
+        template: "#base-layout",
+        components: {
+            "page-ibox": pageIbox
         },
-        data:function() {
-          return {testStr:"我是base-layout data : TestStr"}
-        },
-        props:{
-            layoutData:Object
+        props: {
+            layoutData: {
+                type: Object,
+                default:function () {
+                    return {iboxData:null}
+                }
+            }
         }
-    })
+    });
 </script>
 </body>
 </html>

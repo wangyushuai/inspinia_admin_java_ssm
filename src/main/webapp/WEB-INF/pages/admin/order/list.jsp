@@ -10,6 +10,12 @@
 <%@include file="../shared/base-layout.jsp"%>
 <%@include file="../shared/page-header.jsp"%>
 
+<template id="iboxContent">
+<div>
+    <p>hello world</p>
+</div>
+</template>
+
 <div id="_wrapper">
     <base-layout v-bind:layout-data="layoutData">
         <div solt="page-header">page-header solt content</div><br/>
@@ -24,7 +30,7 @@
             layoutData:{
                iboxData:{
                     title:"ibox Title xx",
-                    content:"ibox content xx"
+                    content:"#iboxContent"
                 }
             },
         }
