@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.wys.admin.pojo.User;
 import com.wys.admin.service.UserService;
-import com.wys.util.Page;
+import com.wys.util.bean.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

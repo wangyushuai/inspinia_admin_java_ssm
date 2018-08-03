@@ -1,4 +1,4 @@
-package com.wys.util;
+package com.wys.util.bean;
 
 /**
  * Created by wangyushuai@fang.com on 2018/3/15.
