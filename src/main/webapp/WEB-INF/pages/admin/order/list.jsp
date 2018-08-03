@@ -8,18 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="../shared/base-layout.jsp"%>
-<%@include file="../shared/page-header.jsp"%>
-
-<template id="iboxContent">
-<div>
-    <p>hello world</p>
-</div>
-</template>
+<%@include file="../shared/page-ibok.jsp"%>
 
 <div id="_wrapper">
-    <base-layout v-bind:layout-data="layoutData">
-        <div solt="page-header">page-header solt content</div><br/>
-        <div>default solt content</div>
+    <base-layout>
+        <page-ibox title="table" content="table content"></page-ibox>
     </base-layout>
 </div>
 
@@ -27,12 +20,6 @@
     var app = new Vue({
         el:"#_wrapper",
         data:{
-            layoutData:{
-               iboxData:{
-                    title:"ibox Title xx",
-                    content:"#iboxContent"
-                }
-            },
         }
     })
 </script>

@@ -48,7 +48,8 @@
 <script>
     Vue.component("base-layout", {
         template: "#base-layout",
-        components: {},
+        components: {
+        },
         props: {
             layoutData: {
                 type: Object,

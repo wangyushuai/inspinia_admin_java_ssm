@@ -49,6 +49,6 @@
     };
 
     //define component
-    Vue.component("page-iobx",pageIbox);
+    Vue.component("page-ibox",pageIbox);
 
 </script>
