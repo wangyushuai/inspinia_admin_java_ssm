@@ -21,8 +21,6 @@
     </div>
 </template>
 
-<%--vue js--%>
-<%-- avoid add repeatly <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>--%>
 <script type="text/javascript">
     Vue.component("page-header",{
         template:"#page-header",

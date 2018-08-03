@@ -6,8 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-
 <template id="page-ibox" >
     <div class="ibox float-e-margins" v-if="iboxSeen">
         <div class="ibox-title">
@@ -49,4 +47,8 @@
             }
         }
     };
+
+    //define component
+    Vue.component("page-iobx",pageIbox);
+
 </script>

@@ -25,11 +25,11 @@
         <%@include file="_navigation.jsp"%>
         <div id="page-wrapper" class="gray-bg">
             <%@include file="_topNavBar.jsp"%>
+            <%-- page-header solt --%>
             <header><slot name="page-header"></slot></header>
             <main id="content">
-                <slot></slot><!--默认插槽-->
-                <%--<page-ibox v-bind:title="layoutData.iboxData.title" v-bind:content="layoutData.iboxData.content"></page-ibox> <!--base-layout 的子组件-->--%>
-                <page-ibox v-bind="layoutData.iboxData"></page-ibox> <!--base-layout 的子组件-->
+                <!--default solt-->
+                <slot></slot>
             </main>
             <%@include file="_footer.jsp"%>
         </div>
@@ -48,9 +48,7 @@
 <script>
     Vue.component("base-layout", {
         template: "#base-layout",
-        components: {
-            "page-ibox": pageIbox
-        },
+        components: {},
         props: {
             layoutData: {
                 type: Object,
