@@ -7,8 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<template id="page-ibox">
-    <div class="ibox float-e-margins">
+
+<template id="page-ibox" >
+    <div class="ibox float-e-margins" v-if="iboxSeen">
         <div class="ibox-title">
             <h5>{{title}}</h5>
             <div class="ibox-tools">
@@ -29,19 +30,23 @@
                 </a>
             </div>
         </div>
-        <div class="ibox-content">
-            {{content}}
+        <div class="ibox-content" v-html="content">
         </div>
     </div>
 </template>
 
+
 <script type="text/javascript">
-    Vue.component("page-ibox",{
+    var pageIbox = {
         template:"#page-ibox",
         props:{
             title:String,
             content:String
+        },
+        computed:{
+            iboxSeen :function () {
+                return  typeof (this.title) != "undefined" && typeof (this.content) != "undefined";
+            }
         }
-    });
+    };
 </script>
-

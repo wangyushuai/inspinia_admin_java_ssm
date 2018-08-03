@@ -38,7 +38,4 @@
     })
 </script>
 
-<script>
-    console.log("test branch develop")
-</script>
 
