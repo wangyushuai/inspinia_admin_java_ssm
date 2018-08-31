@@ -20,6 +20,7 @@
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="#">Config option 1</a>
                     </li>
+                    </li>
                     <li><a href="#">Config option 2</a>
                     </li>
                 </ul>
@@ -28,7 +29,9 @@
                 </a>
             </div>
         </div>
-        <div class="ibox-content" v-html="content">
+        <%--<div class="ibox-content" v-html="content">--%>
+        <div class="ibox-content">
+            <slot></slot>
         </div>
     </div>
 </template>
