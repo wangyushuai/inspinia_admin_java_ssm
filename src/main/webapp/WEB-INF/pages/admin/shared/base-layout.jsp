@@ -42,9 +42,11 @@
 <script src="${pageContext.request.contextPath}/vendor/js/bootstrap.min.js"></script>
 <script src="${pageContext.request.contextPath}/vendor/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="${pageContext.request.contextPath}/vendor/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
 <!-- Custom and plugin javascript -->
 <script src="${pageContext.request.contextPath}/vendor/js/inspinia.js"></script>
-<script src="${pageContext.request.contextPath}/vendor/js/plugins/pace/pace.min.js"></script>
+<script src="${pageContext.request.contextPath}/vendor/js/base-config.js"></script>
+
 <script>
     Vue.component("base-layout", {
         template: "#base-layout",
