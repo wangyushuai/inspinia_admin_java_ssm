@@ -10,6 +10,12 @@ public class DTResponseModel<T> {
     private int recordsFiltered;//过滤查询后的数量
     private T data;//当前分页数据
 
+    public DTResponseModel(int draw,int recordsTotal, int recordsFiltered,T data) {
+        this.draw = draw;
+        this.recordsTotal = recordsTotal;
+        this.recordsFiltered = recordsFiltered;
+        this.data = data;
+    }
     public int getDraw() {
         return draw;
     }
