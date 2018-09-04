@@ -9,7 +9,6 @@ import java.util.List;
  * Created by wangyushuai@fang.com on 2018/8/3.
  */
 public class DTRequestModel {
-
     /**
      * 绘制计数器
      */
@@ -27,12 +26,12 @@ public class DTRequestModel {
     /**
      * 各列详情
      */
-    private List<DTColumnsDetail> columns;
+    //private List<DTColumnsDetail> columns;
 
     /**
      *  搜索
     */
-    private DTColumnsSearch search;
+    //private DTColumnsSearch search;
 
     public int getDraw() {
         return draw;
@@ -58,21 +57,21 @@ public class DTRequestModel {
         this.start = start;
     }
 
-    public List<DTColumnsDetail> getColumns() {
-        return columns;
-    }
+//    public List<DTColumnsDetail> getColumns() {
+//        return columns;
+//    }
+//
+//    public void setColumns(List<DTColumnsDetail> columns) {
+//        this.columns = columns;
+//    }
 
-    public void setColumns(List<DTColumnsDetail> columns) {
-        this.columns = columns;
-    }
-
-    public DTColumnsSearch getSearch() {
-        return search;
-    }
-
-    public void setSearch(DTColumnsSearch search) {
-        this.search = search;
-    }
+//    public DTColumnsSearch getSearch() {
+//        return search;
+//    }
+//
+//    public void setSearch(DTColumnsSearch search) {
+//        this.search = search;
+//    }
 }
 
 
