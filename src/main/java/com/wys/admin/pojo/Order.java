@@ -1,5 +1,7 @@
 package com.wys.admin.pojo;
 
+import com.wys.admin.service.OrderService;
+
 import java.util.Date;
 import java.util.List;
 
@@ -138,11 +140,30 @@ public class Order {
         return status;
     }
 
-    public String getStatusDesc()
-    {
-        String desc = "未知";
-        switch (status) {
 
+    public String getStatusDesc(){
+        String desc ="未知";
+        switch(status){
+            case OrderService.waitPay:
+                desc="待付款";
+                break;
+            case OrderService.waitDelivery:
+                desc="待发货";
+                break;
+            case OrderService.waitConfirm:
+                desc="待收货";
+                break;
+            case OrderService.waitReview:
+                desc="等评价";
+                break;
+            case OrderService.finish:
+                desc="完成";
+                break;
+            case OrderService.delete:
+                desc="刪除";
+                break;
+            default:
+                desc="未知";
         }
         return desc;
     }

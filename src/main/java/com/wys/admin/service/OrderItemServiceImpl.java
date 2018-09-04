@@ -47,7 +47,9 @@ public class OrderItemServiceImpl implements OrderItemService {
 
     @Override
     public void fill(List<Order> os) {
-
+        for (Order o : os) {
+            fill(o);
+        }
     }
 
     @Override
