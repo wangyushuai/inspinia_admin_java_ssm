@@ -18,6 +18,7 @@
         <page-ibox title="table" content="table content">
             <table class="dataTables table table-striped table-bordered table-hover dataTables-example">
                 <thead>
+                    <th>serialNum</th>
                     <th>ID</th>
                     <th>Status</th>
                     <th>Price</th>
@@ -51,6 +52,7 @@
         }
         //ajax 请求返回为复杂对象，故需要设置列详情
         $.fn.dtconfig.columns = [
+            {data:null,name:"serialNum"},
             {data:"id",name:"id"},
             {data:"statusDesc",name:"status"},
             {data:"totalNumber",name:"price"},
@@ -61,11 +63,16 @@
             {data:"deliveryDate",name:"deliverTime"}
         ];
         $.fn.dtconfig.columnDefs = [{
-            targets:[5,6,7],
+            targets:[6,7,8],
             render:function (data,type,row,meta) {
                 return (new Date(data).Format("yyyy-MM-dd hh:mm:ss"));
             }
         }]
-        $('.dataTables').DataTable($.fn.dtconfig);
+        var page_dt = $('.dataTables').DataTable($.fn.dtconfig);
+        page_dt.on('draw.dt',function () {
+            page_dt.column(0, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        })
     }
 </script>
