@@ -18,6 +18,8 @@ public class OrderServiceImpl implements OrderService {
     OrderMapper orderMapper;
     @Autowired
     UserService userService;
+    @Autowired
+    OrderItemService orderItemService;
 
     @Override
     public void add() {
@@ -42,21 +44,21 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List list() {
         OrderExample example = new OrderExample();
-        example.setOrderByClause("id desc");
+        example.setOrderByClause("id");
         List<Order> result = orderMapper.selectByExample(example);
-        setUser(result);
+        setOrders(result);
         return result;
     }
 
-    public void setUser(List<Order> os) {
+    private void setOrders(List<Order> os) {
         for (Order o: os) {
-            setUser(o);
+            setOrder(o);
         }
     }
 
-    public void setUser(Order order) {
-        User user = userService.get(order.getId());
+    private void setOrder(Order order) {
+        User user = userService.get(order.getUid());
         order.setUser(user);
+        orderItemService.fill(order);
     }
-
 }
