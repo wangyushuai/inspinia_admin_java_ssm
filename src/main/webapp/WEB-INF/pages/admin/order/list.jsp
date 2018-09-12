@@ -75,7 +75,7 @@
         },{
             targets:[0],
             render:function (data,type,row,meta) {
-                return "<a title='详情'><span style='margin-right: 5px;'><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></span></a><a title='发货'><span><i class=\"fa fa-paper-plane\" aria-hidden=\"true\"></i></span></a>"
+                return "<a title='详情' class='details-control'><span style='margin-right: 5px;'><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></span></a><a title='发货'><span><i class=\"fa fa-paper-plane\" aria-hidden=\"true\"></i></span></a>"
             }
         }];
         //init
@@ -117,7 +117,7 @@
 
         //设置子表格展开，收起事件
         var detailRows = [];
-        $('.dataTables tbody').on('click','tr td.details-control',function () {
+        $('.dataTables tbody').on('click','tr td .details-control',function () {
            var tr = $(this).closest("tr");
            var row = page_dt.row(tr);
            var index =  $.inArray(tr.attr('id'),detailRows);
@@ -136,7 +136,6 @@
                    detailRows.push(tr.attr('id'));
                }
            }
-
         });
     }
 </script>
