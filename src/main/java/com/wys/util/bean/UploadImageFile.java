@@ -1,4 +1,4 @@
-package com.wys.util;
+package com.wys.util.bean;
 
 import org.springframework.web.multipart.MultipartFile;
 

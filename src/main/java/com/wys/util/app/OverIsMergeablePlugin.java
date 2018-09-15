@@ -1,4 +1,4 @@
-package com.wys.util;
+package com.wys.util.app;
 
 import org.mybatis.generator.api.GeneratedXmlFile;
 import org.mybatis.generator.api.IntrospectedTable;

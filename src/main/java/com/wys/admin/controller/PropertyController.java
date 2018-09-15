@@ -6,14 +6,13 @@ import com.wys.admin.pojo.Category;
 import com.wys.admin.pojo.Property;
 import com.wys.admin.service.CategoryService;
 import com.wys.admin.service.PropertyService;
-import com.wys.util.Page;
+import com.wys.util.bean.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.lang.reflect.Method;
 import java.util.List;
 
 /**

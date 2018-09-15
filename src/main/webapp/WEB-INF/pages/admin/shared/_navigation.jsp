@@ -28,7 +28,7 @@
                     <li><a href="/admin/category/list/">Category Manage</a></li>
                     <li><a href="/admin/product/list">Product Manage</a></li>
                     <li><a href="/admin/user/list">User Manage</a></li>
-                    <li><a href="dashboard_5.html">Dashboard v.5 </a></li>
+                    <li><a href="/admin/order/list">Order Manage</a></li>
                 </ul>
             </li>
         </ul>

@@ -19,7 +19,7 @@
     <link href="${pageContext.request.contextPath}/vendor/css/animate.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/vendor/css/style.css" rel="stylesheet">
     <%--vue js--%>
-    <%--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>--%>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 <body>
