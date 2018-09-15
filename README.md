@@ -16,9 +16,10 @@ inspinia_admin_Java(后台管理系统框架)
 2. otherFun_wys 开发中版本
 
 ## 当前功能
-*目前开发了3个Demo:*
+*目前开发了4个Demo:*
 - 分类管理
 - 属性管理
 - 产品管理
+- 订单管理（使用VUE组件）
 
 author： yushuai_w@163.com
