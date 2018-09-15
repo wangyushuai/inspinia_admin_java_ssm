@@ -17,10 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by wangyushuai@fang.com on 2018/7/17.
@@ -46,6 +43,9 @@ public class OrderController {
     ) {
         int allCount = 0;
         PageHelper.offsetPage(start,length);
+        if (! searchValue.isEmpty()) {
+
+        }
         List<Order> orderList = service.list();
         allCount = (int) new PageInfo<>(orderList).getTotal();
         DTResponseModel<List<Order>> result = new DTResponseModel<>(draw,allCount,allCount,orderList);
