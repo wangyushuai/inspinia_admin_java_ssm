@@ -16,6 +16,17 @@
 <div id="_wrapper">
     <base-layout>
         <page-ibox title="订单管理" content="table content">
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="form-group col-md-2 col-sm-10" style="margin-left: 0px;">
+                        <div class="input-prepend input-group">
+                            <span class="add-on input-group-addon"><i class="fa fa-id-card-o"></i>ID</span>
+                            <input id="ID" name="ID"  type="text"  class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="btn btn-primary" style="margin-left: 10px;" v-on:click="">查询</div>
+                </div>
+            </div>
             <table class="dataTables table table-striped table-bordered table-hover dataTables-example">
                 <thead>
                     <th>Option</th>
@@ -36,7 +47,14 @@
 <script>
     var app = new Vue({
         el: "#_wrapper",
-        data: {},
+        data: {
+            dt_searchId:''
+        },
+        methods: {
+            tableSearch: function (event) {
+                var id =
+            }
+        },
         mounted:function () {
             this.$nextTick(function () {
                 //load main table
@@ -45,10 +63,11 @@
         }
     })
 
+    //初始化表格相关
     function init_datatables() {
         $.fn.dtconfig.ajax = {
             url: "/admin/order/ajaxList",
-            type: "get",
+            type: "post",
         }
         //ajax 请求返回为复杂对象，故需要设置列详情
         $.fn.dtconfig.columns = [
@@ -137,5 +156,8 @@
                }
            }
         });
+
+        //设置page_dt 为全局变量
+        $.page_dt = page_dt;
     }
 </script>
