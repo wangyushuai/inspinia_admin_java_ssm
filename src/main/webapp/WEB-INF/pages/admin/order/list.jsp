@@ -52,7 +52,7 @@
         },
         methods: {
             tableSearch: function (event) {
-                var id =
+                var id =0;
             }
         },
         mounted:function () {
