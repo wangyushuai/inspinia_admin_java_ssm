@@ -6,10 +6,10 @@ inspinia_admin_Java(后台管理系统框架)
 
 ## 项目预览截图
 ![项目截图](https://github.com/wangyushuai/inspinia_admin_java_ssm/raw/master/src/main/webapp/vendor/img/projectView.png)
-
+![项目截图](https://github.com/wangyushuai/inspinia_admin_java_ssm/raw/master/src/main/webapp/vendor/img/projectView_order.png)
 ## 技术亮点：
 1. 使用了Mybatis逆向工程，自动生成mapper.xml 和 bean
-2. 使用了Vue 框架，做了母版页
+2. 使用了Vue框架，做了母版页,提高视图代码复用率，每个页面专注于自己的业务逻辑
 
 ## 分支介绍
 1. master 最新稳定版本
